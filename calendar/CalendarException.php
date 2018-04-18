@@ -1,5 +1,5 @@
 <?php
-namespace common\devskyfly\helpers\calendar;
+namespace devskyfly\helpers\calendar;
 
 class CalendarException extends \Exception
 {
