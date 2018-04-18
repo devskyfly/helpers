@@ -1,0 +1,12 @@
+{
+    "name": "devskyfly/helpers",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ivan",
+            "email": "devskyfly@gmail.com"
+        }
+    ],
+    "require": {}
+}
