@@ -1,18 +1,20 @@
 {
-    "name": "devskyfly/helpers",
-    "repositories":[
-        {
-            "type":"vcs",
-            "url":"https://github.com/devskyfly/helpers"
-        }
-    ],
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Ivan",
-            "email": "devskyfly@gmail.com"
-        }
-    ],
-    "require": {}
+	"name" : "devskyfly/helpers",
+	"repositories" : [{
+			"type" : "vcs",
+			"url" : "https://github.com/devskyfly/helpers"
+		}
+	],
+	"type" : "library",
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "Ivan",
+			"email" : "devskyfly@gmail.com"
+		}
+	],
+	"autoload" : {
+		"psr-4" : {
+			"devskyfly\\helpers\\calendar\\" : "calendar/"
+		}
+	}
 }
