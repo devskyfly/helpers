@@ -1,5 +1,11 @@
 {
     "name": "devskyfly/helpers",
+    "repositories":[
+        {
+            "type":"vcs",
+            "url":"https://github.com/devskyfly/helpers"
+        }
+    ],
     "type": "library",
     "license": "MIT",
     "authors": [
