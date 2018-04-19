@@ -14,7 +14,8 @@
 	],
 	"autoload" : {
 		"psr-4" : {
-			"devskyfly\\helpers\\calendar\\" : "calendar/"
+			"devskyfly\\helpers\\calendar\\" : "src/calendar/",
+			"devskyfly\\helpers\\string\\" : "src/string/"
 		}
 	}
 }
