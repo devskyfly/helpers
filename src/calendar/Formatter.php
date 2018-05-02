@@ -5,7 +5,7 @@ class Formatter
 {   
     /**
      * 
-     * @param strung $date
+     * @param string $date
      * @param Month::IM_PAD|Month::ROD_PAD $pad
      * @throws CalendarException
      * @return string
@@ -14,7 +14,7 @@ class Formatter
     {
         $result=date_parse($date);
         if($result===false){
-            throw new CalendarException("Can't parse date parem.");
+            throw new CalendarException("Can't parse date param.");
         }
         
         $day=(int)$result['day'];
