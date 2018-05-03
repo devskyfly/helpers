@@ -64,6 +64,13 @@ class Month
         return self::getMonthNameByNmb($month_nmb,$pad);
     }
     
+    /**
+     * 
+     * @param string $date
+     * @param self::IM_PAD|self::ROD_PAD  $pad
+     * @throws CalendarException
+     * @return string
+     */
     public static function getDayAndMonthName($date,$pad=self::IM_PAD)
     {
         $result=date_parse($date);
