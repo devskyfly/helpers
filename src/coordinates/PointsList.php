@@ -2,6 +2,8 @@
 namespace devskyfly\helpers\coordinates;
 
 
+use devskyfly;
+
 class PointsList
 {
     /**
@@ -30,7 +32,7 @@ class PointsList
     /**
      * Return list property
      * 
-     * @return unknown
+     * @return [devskyfly\helpers\coordinates\Point]
      */
     public function getList()
     {

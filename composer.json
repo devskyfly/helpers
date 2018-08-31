@@ -15,7 +15,11 @@
 	"autoload" : {
 		"psr-4" : {
 			"devskyfly\\helpers\\calendar\\" : "src/calendar/",
-			"devskyfly\\helpers\\string\\" : "src/string/"
+			"devskyfly\\helpers\\string\\" : "src/string/",
+			"devskyfly\\helpers\\coordinates\\" : "src/coordinates/"
 		}
+	},
+	"require-dev": {
+		"codeception/codeception": "^2.4"
 	}
 }

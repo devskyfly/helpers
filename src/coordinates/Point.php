@@ -26,13 +26,43 @@ class Point
      */
     protected $r=1;
     
-    public function __construct($lat,$lng,$r=1)
+    /**
+     * 
+     * @param float $lat
+     * @param float$lng
+     * @param object $reference
+     * @param number $r
+     * @throws \InvalidArgumentException
+     */
+    public function __construct($lat,$lng,$reference=null,$r=1)
     {
+        if(!is_numeric($lat))
+        {
+            throw new \InvalidArgumentException("lat argument is not numeric");
+        }
+        
+        if(!is_numeric($lng))
+        {
+            throw new \InvalidArgumentException("lng argument is not numeric");
+        }
+        
+        if(!is_numeric($r))
+        {
+            throw new \InvalidArgumentException("r argument is not numeric");
+        }
+        
+        if(!is_null($reference)){
+            if(!is_object($reference)){
+                throw new \InvalidArgumentException("reference is not object");
+            }
+        }
+            
         $this->lat=$lat;
         $this->lng=$lng;
         $this->r=$r;
+        $this->reference=$reference;
         
-        $this->conver();
+        $this->convert();
     }
     
     /**
@@ -49,6 +79,7 @@ class Point
     }
     
     /**
+     * Return reference property
      * 
      * @return mixed
      */
