@@ -38,4 +38,24 @@ class PointsList
     {
         return $this->list;
     }
+
+    /**
+     * @return devskyfly\helpers\coordinates\Point
+     */
+    public function calcMediumPoint()
+    {
+        $lat=0;
+        $lng=0;
+        $i=0;
+        foreach ($this->list as $point)
+        {
+            $i++;
+            $angles=$point->getAngleCoordinates();
+            $lat+=$angles['lat'];
+            $lng+=$angles['lng'];
+        }
+        
+        $point=new Point($lat/$i, $lng/$i);
+        return $point;
+    }
 }

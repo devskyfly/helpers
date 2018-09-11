@@ -9,7 +9,7 @@ class Point
      * 
      * @var array
      */
-    protected $angel_coordinates=['lat'=>0,'lng'=>0];
+    protected $angle_coordinates=['lat'=>0,'lng'=>0];
     
     /**
      * 
@@ -57,8 +57,8 @@ class Point
             }
         }
             
-        $this->angel_coordinates['lat']=$lat;
-        $this->angel_coordinates['lng']=$lng;
+        $this->angle_coordinates['lat']=$lat;
+        $this->angle_coordinates['lng']=$lng;
         $this->r=$r;
         $this->reference=$reference;
         
@@ -72,9 +72,9 @@ class Point
      */
     protected function convert()
     {
-        $this->threeD_coordinates['x']=cos($this->angel_coordinates['lat'])*cos($this->angel_coordinates['lng'])*$this->r;
-        $this->threeD_coordinates['y']=cos($this->angel_coordinates['lat'])*sin($this->angel_coordinates['lng'])*$this->r;
-        $this->threeD_coordinates['z']=sin($this->angel_coordinates['lat']);
+        $this->threeD_coordinates['x']=cos($this->angle_coordinates['lat'])*cos($this->angle_coordinates['lng'])*$this->r;
+        $this->threeD_coordinates['y']=cos($this->angle_coordinates['lat'])*sin($this->angle_coordinates['lng'])*$this->r;
+        $this->threeD_coordinates['z']=sin($this->angle_coordinates['lat']);
         return $this;
     }
     
@@ -98,5 +98,12 @@ class Point
         return $this->threeD_coordinates;
     }
     
-    
+    /**
+     * Return angle_coordinates
+     * @return number[]
+     */
+    public function getAngleCoordinates()
+    {
+        return $this->angle_coordinates;
+    }
 }
