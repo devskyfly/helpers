@@ -8,8 +8,11 @@ namespace devskyfly\helpers\coordinates;
          $coods_a=$point_a->getThreeDCoordinates();
          $coods_b=$point_b->getThreeDCoordinates();
          
-         $val=pow(($coods_a['x']-$coods_b['x']),2)+pow(($coods_a['y']-$coods_b['y']),2)+pow(($coods_a['z']-$coods_b['z']),2);
+         $summ=
+         pow(($coods_a['x']-$coods_b['x']),2)
+         +pow(($coods_a['y']-$coods_b['y']),2)
+         +pow(($coods_a['z']-$coods_b['z']),2);
          
-         return sqrt($val);
+         return sqrt($summ);
      }
  }

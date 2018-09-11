@@ -22,31 +22,24 @@ class PointsComparator
     }
     
     /**
-     * 
-     * @param callback $function
-     * @return \devskyfly\helpers\coordinates\Point
-     */
-    protected function listGenerator()
-    {
-        foreach ($this->list as $item){
-            yield $item;
-        }
-    }
-    
-    /**
      * Return nearest point
      * 
      * @return \devskyfly\helpers\coordinates\Point
      */
     public function getNearestPoint()
     {
+        $list=$this->list->getList();
         $abs=0;
         $result=null;
         
         $i=1;
-        foreach ($this->listGenerator() as $item){
+        
+        foreach ($list as $key=>$item){
+            
             if($i==1){
+                
                 $result=$item;
+                
                 $abs=PointsOperations::abs($this->point,$item);
             }else{
                 $next_abs=PointsOperations::abs($this->point,$item);
@@ -54,10 +47,10 @@ class PointsComparator
                 if($next_abs<$abs){
                     $result=$item;
                 }
+                $abs=$next_abs;
             }
             $i++;
         }
-        
         return $result;
     }
     

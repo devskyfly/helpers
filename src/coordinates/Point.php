@@ -57,8 +57,8 @@ class Point
             }
         }
             
-        $this->lat=$lat;
-        $this->lng=$lng;
+        $this->angel_coordinates['lat']=$lat;
+        $this->angel_coordinates['lng']=$lng;
         $this->r=$r;
         $this->reference=$reference;
         
@@ -72,9 +72,9 @@ class Point
      */
     protected function convert()
     {
-        $this->threeD_coordinates['x']=cos($this->lat)*cos($this->lng)*$this->r;
-        $this->threeD_coordinates['y']=cos($this->lat)*sin($this->lng)*$this->r;
-        $this->threeD_coordinates['z']=sin($this->lat);
+        $this->threeD_coordinates['x']=cos($this->angel_coordinates['lat'])*cos($this->angel_coordinates['lng'])*$this->r;
+        $this->threeD_coordinates['y']=cos($this->angel_coordinates['lat'])*sin($this->angel_coordinates['lng'])*$this->r;
+        $this->threeD_coordinates['z']=sin($this->angel_coordinates['lat']);
         return $this;
     }
     
