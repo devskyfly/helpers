@@ -34,7 +34,11 @@ class PointsComparator
         
         $i=1;
         
+        
+        
         foreach ($list as $key=>$item){
+            
+            $angl=$item->getAngleCoordinates();
             
             if($i==1){
                 
@@ -46,8 +50,8 @@ class PointsComparator
                 
                 if($next_abs<$abs){
                     $result=$item;
-                }
-                $abs=$next_abs;
+                    $abs=$next_abs;
+                }  
             }
             $i++;
         }
