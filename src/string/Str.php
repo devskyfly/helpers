@@ -1,7 +1,7 @@
 <?php
 namespace devskyfly\helpers\string;
 
-class String
+class Str
 {
     /**
      * Return word for current number
